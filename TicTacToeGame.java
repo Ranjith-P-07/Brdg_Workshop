@@ -8,12 +8,27 @@ public class TicTacToeGame(){
 		}
 		return board;
 	}
-
+	//UC-2 Userselction
+   public static userSlection(){
+      Scanner in = new Scanner(System.in);
+      char computerMark='X';
+      System.out.println("Enter Mark : ");
+      char playerMark=in.next().charAt(0);
+      if(playerMark=='X' || playerMark=='X'){
+         computerMark='O';
+      }
+      else if (playerMark=='O'|| playerMark=='O'){
+         computerMark='X';
+      }
+      else{
+         System.out.println("Invalid Input Mark");
+      }
+   }
 	public static void main(String args[]){
 		system.out.println("Welcome to TIc Tac Toe Game");
-		char[] BoardObj = new char[10];
+		char[] boardObj = new char[10];
 		BoardObj=Board();
 		TicTacToeGame TicTacToeGameObj=new TicTacToeGame();
-		TicTacToeGameObj.UserSelection();
+		TicTacToeGameObj.userSelection();
 	}
 }
