@@ -35,10 +35,28 @@ public class TicTacToeGame(){
    }
 
 	public static void main(String args[]){
+		String winner = null;
 		system.out.println("Welcome to TIc Tac Toe Game");
 		char[] boardObj = new char[10];
-		BoardObj=Board();
-		TicTacToeGame TicTacToeGameObj=new TicTacToeGame();
-		TicTacToeGameObj.userSelection();
+		boardObj=Board();
+		TicTacToeGame ticTacToeGameObj=new TicTacToeGame();
+		ticTacToeGameObj.userSelection();
+		TicTacToeGame gameObj=new TicTacToeGame();
+		gameObj.userSelection();
+		gameObj.boardDisplay(boardObj);
+		while(winner == null){
+			int numInput;
+			try{
+				numTnput = in.nextInt();
+				if( !(numInput > 0 && numInput <= 9)){
+					System.out.println("Invalid input;re-enter slot: ");
+					continue;
+				}
+			}
+			catch (InputMismatchException e){
+				System.out.println("Invalid input;re-enter ");
+				continue;
+			}
+		}
 	}
 }
