@@ -24,6 +24,16 @@ public class TicTacToeGame(){
          System.out.println("Invalid Input Mark");
       }
    }
+	//UC-3 Displaying of Board
+   public void boardDisplay(char[] show){
+      for(int box = 0; box< show.length;i++){
+         if(box==3||box==6){
+            System.out.println();
+         }
+         System.out.print(show[box]+"|");
+      }
+   }
+
 	public static void main(String args[]){
 		system.out.println("Welcome to TIc Tac Toe Game");
 		char[] boardObj = new char[10];
